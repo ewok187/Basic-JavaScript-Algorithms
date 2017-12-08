@@ -1,14 +1,14 @@
 function largestOfFour(arr) {
-  var result = [];
+  var result = [];                            // create array to save highest nmb
 
   for (i = 0; i < arr.length; i++) {
-    var highNmb = arr[i][0];
+    var highNmb = arr[i][0];                  // go through the array and save the first nmb of each sub-array in var highNmb
     for (x = 1; x < arr[i].length; x++) {
-      if (arr[i][x] > highNmb) {
+      if (arr[i][x] > highNmb) {              // go through all sub-arrays and if there is a higher nmb then the first, save it in highNmb
         highNmb = arr[i][x];
       }
     }
-    result.push(highNmb);
+    result.push(highNmb);                     // push the highest nmb of each sub-array in the result array
   }
   return result;
 }
